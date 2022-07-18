@@ -8,6 +8,13 @@ class Kelompok(models.Model):
     def __str__(self):
         return self.nama
 
+class Penerbit(models.Model):
+    nama = models.CharField(max_length=100)
+    alamat = models.CharField(max_length=100)
+    telepon = models.CharField(max_length=100)
+    def __str__(self):
+        return self.nama
+
 class Buku(models.Model):
     judul = models.CharField(max_length=100)
     penulis = models.CharField(max_length=100)
@@ -20,10 +27,3 @@ class Buku(models.Model):
 
     def __str__(self):
         return self.judul
-
-class Penerbit(models.Model):
-    nama = models.CharField(max_length=100)
-    alamat = models.CharField(max_length=100)
-    telepon = models.CharField(max_length=100)
-    def __str__(self):
-        return self.nama
