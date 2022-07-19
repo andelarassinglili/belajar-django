@@ -2,8 +2,7 @@ from dataclasses import fields
 from import_export import resources
 from glcm.models import Buku
 from import_export.fields import Field
-
-from glcm.views import penerbit
+from import_export import resources
 
 class BukuResource(resources.ModelResource):
     kelompok_id__nama = Field(attribute='kelompok_id', column_name='Kelompok')
